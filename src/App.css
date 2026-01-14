@@ -73,6 +73,90 @@ h1 {
   transform: translateY(0);
 }
 
+.logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 500px;
+  padding: 0 1rem;
+}
+
+.logo-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  border: 2px dashed #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.3s, background-color 0.3s;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.logo-label:hover {
+  border-color: #667eea;
+  background-color: rgba(102, 126, 234, 0.05);
+}
+
+.logo-input {
+  display: none;
+}
+
+.logo-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.logo-preview img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.remove-logo-btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  color: #f5576c;
+  background: white;
+  border: 2px solid #f5576c;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.remove-logo-btn:hover {
+  background: #f5576c;
+  color: white;
+}
+
+.qr-display {
+  padding: 1rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qr-display canvas {
+  width: 280px !important;
+  height: 280px !important;
+  display: block;
+}
+
 .qr-section {
   display: flex;
   flex-direction: column;
@@ -174,5 +258,15 @@ h1 {
   .generated-url {
     font-size: 0.9rem;
     max-width: 500px;
+  }
+
+  .qr-display canvas {
+    width: 400px !important;
+    height: 400px !important;
+  }
+
+  .logo-preview img {
+    width: 100px;
+    height: 100px;
   }
 }
