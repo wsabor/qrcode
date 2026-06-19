@@ -1,9 +1,17 @@
-function buildField(id, value) {
+interface PixPayloadParams {
+  chave: string
+  nome: string
+  cidade: string
+  valor?: string
+  descricao?: string
+}
+
+function buildField(id: string, value: string): string {
   const size = String(value.length).padStart(2, '0')
   return `${id}${size}${value}`
 }
 
-function crc16(str) {
+function crc16(str: string): string {
   let crc = 0xffff
   for (let i = 0; i < str.length; i++) {
     crc ^= str.charCodeAt(i) << 8
@@ -18,7 +26,7 @@ function crc16(str) {
   return (crc & 0xffff).toString(16).toUpperCase().padStart(4, '0')
 }
 
-export function buildPixPayload({ chave, nome, cidade, valor, descricao }) {
+export function buildPixPayload({ chave, nome, cidade, valor, descricao }: PixPayloadParams): string {
   let mai = buildField('00', 'BR.GOV.BCB.PIX')
   mai += buildField('01', chave.trim())
   if (descricao?.trim()) {

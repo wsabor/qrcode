@@ -3,7 +3,8 @@
     "allow": [
       "Bash(npm install:*)",
       "Bash(npm run lint)",
-      "Bash(git -C c:/DEV/Projects/qrcode log --oneline)"
+      "Bash(git -C c:/DEV/Projects/qrcode log --oneline)",
+      "Bash(npm run *)"
     ]
   }
 }
