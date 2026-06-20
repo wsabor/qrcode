@@ -4,7 +4,11 @@
       "Bash(npm install:*)",
       "Bash(npm run lint)",
       "Bash(git -C c:/DEV/Projects/qrcode log --oneline)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(npx tsc *)",
+      "Bash(npx vite *)",
+      "Bash(convert -background none icon-source.svg -resize 192x192 pwa-192x192.png)",
+      "Bash(convert -background none icon-source.svg -resize 512x512 pwa-512x512.png)"
     ]
   }
 }
