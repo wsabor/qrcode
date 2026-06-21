@@ -361,6 +361,14 @@ function App() {
     saveHistory(updated);
   }
 
+  function handleImportHistory(imported: HistoryItem[]): void {
+    const existingIds = new Set(history.map((h) => h.id));
+    const newItems = imported.filter((item) => !existingIds.has(item.id));
+    const merged = [...newItems, ...history];
+    setHistory(merged);
+    saveHistory(merged);
+  }
+
   const urlError =
     mode === "url" && /^https?:\/\//i.test(urlInput)
       ? (() => {
@@ -498,6 +506,7 @@ function App() {
           history={history}
           onRestore={restoreFromHistory}
           onDelete={deleteFromHistory}
+          onImport={handleImportHistory}
         />
 
         <p className="text-center text-xs text-slate-400 dark:text-slate-500 mt-6">

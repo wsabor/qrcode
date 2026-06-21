@@ -8,7 +8,9 @@
       "Bash(npx tsc *)",
       "Bash(npx vite *)",
       "Bash(convert -background none icon-source.svg -resize 192x192 pwa-192x192.png)",
-      "Bash(convert -background none icon-source.svg -resize 512x512 pwa-512x512.png)"
+      "Bash(convert -background none icon-source.svg -resize 512x512 pwa-512x512.png)",
+      "Bash(node -e ' *)",
+      "Bash(npx vitest *)"
     ]
   }
 }
